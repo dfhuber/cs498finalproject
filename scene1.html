@@ -27,11 +27,12 @@ var g = svg.append("g")
 d3.tsv("NumOfEstablishments.tsv", function(data) {
 		//Coerce the NumOfEstablish to number
 		data.forEach(function(d) {
+		    d.ManufacturingSector = d.ManufacturingSector;
 			d.NumOfEstablish = +d.NumOfEstablish;
 		}) ;
   
   	x.domain([0, d3.max(data, function(d) { return d.NumOfEstablish; })]);
-    y.domain(data.map(function(d) { return d.area; })).padding(0.1);
+    y.domain(data.map(function(d) { return d.ManufacturingSector; })).padding(0.1);
 
     g.append("g")
         .attr("class", "x axis")
