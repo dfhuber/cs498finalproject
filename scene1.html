@@ -24,8 +24,7 @@ var y = d3.scaleBand().range([height, 0]);
 var g = svg.append("g")
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
   
-d3.tsv("data.tsv", function(data) {
-  	data.sort(function(a, b) { return a.NumOfEstablish - b.NumOfEstablish; });
+	d3.tsv("data.tsv", function(data) ;
   
   	x.domain([0, d3.max(data, function(d) { return d.NumOfEstablish; })]);
     y.domain(data.map(function(d) { return d.area; })).padding(0.1);

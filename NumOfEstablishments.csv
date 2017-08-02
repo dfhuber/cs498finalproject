@@ -1,22 +1,22 @@
 NAICScode,ManufacturingSector,NumOfEstablish
-311,Food manufacturing,4989
-312,Beverage and tobacco product manufacturing,1002
-313,Textile mills,205
-314,Textile product mills,936
-315,Apparel manufacturing,456
-316,Leather and allied product manufacturing,166
-321,Wood product manufacturing,2760
-322,Paper manufacturing,1142
-323,Printing and related support activities,5176
-324,Petroleum and coal products manufacturing,382
-325,Chemical manufacturing,2644
-326,Plastics and rubber products manufacturing,3447
-327,Nonmetallic mineral product manufacturing,2812
-331,Primary metal manufacturing,1396
 332,Fabricated metal product manufacturing,14661
 333,Machinery manufacturing,7779
-334,Computer and electronic product manufacturing,2137
-335,"Electrical equipment, appliance, and component manufacturing",1249
+323,Printing and related support activities,5176
+311,Food manufacturing,4989
+339,Miscellaneous manufacturing,4895
+326,Plastics and rubber products manufacturing,3447
 336,Transportation equipment manufacturing,3060
 337,Furniture and related product manufacturing,2875
-339,Miscellaneous manufacturing,4895
+327,Nonmetallic mineral product manufacturing,2812
+321,Wood product manufacturing,2760
+325,Chemical manufacturing,2644
+334,Computer and electronic product manufacturing,2137
+331,Primary metal manufacturing,1396
+335,"Electrical equipment, appliance, and component manufacturing",1249
+322,Paper manufacturing,1142
+312,Beverage and tobacco product manufacturing,1002
+314,Textile product mills,936
+315,Apparel manufacturing,456
+324,Petroleum and coal products manufacturing,382
+313,Textile mills,205
+316,Leather and allied product manufacturing,166
