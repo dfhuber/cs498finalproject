@@ -24,7 +24,7 @@ var y = d3.scaleBand().range([height, 0]);
 var g = svg.append("g")
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
   
-	d3.tsv("data.tsv", function(data) {
+d3.tsv("NumOfEstablishments.tsv", function(data) {
 		//Coerce the NumOfEstablish to number
 		data.forEach(function(d) {
 			d.NumOfEstablish = +d.NumOfEstablish;
