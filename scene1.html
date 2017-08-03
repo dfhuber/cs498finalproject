@@ -41,10 +41,10 @@ var svg = d3.select("body").append("svg")
     .attr("transform", 
           "translate(" + margin.left + "," + margin.top + ")");
 
-  // format the data
-  data.forEach(function(d) {
-    d.NumOfEstablish = +d.NumOfEstablish;
-  });
+    // format the data
+   // data.forEach(function(d) {
+   // d.NumOfEstablish = +d.NumOfEstablish;
+ // });
 
   // Scale the range of the data in the domains
   x.domain([0, d3.max(data, function(d){ return d.NumOfEstablish; })])
