@@ -10,13 +10,7 @@
 <body>    	
 <script src="//d3js.org/d3.v4.min.js"></script>
 <script>
-var data = d3.tsv("NumOfEstablishments.tsv", function(data) {
-		//Coerce the NumOfEstablish to number
-		data.forEach(function(d) {
-		    d.ManufacturingSector = d.ManufacturingSector;
-			d.NumOfEstablish = +d.NumOfEstablish;
-		}) ;
-}) ;
+
 		
 // set the dimensions and margins of the graph
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
@@ -39,8 +33,15 @@ var svg = d3.select("body").append("svg")
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", 
-          "translate(" + margin.left + "," + margin.top + ")");
+          "translate(" + margin.left + "," + margin.top + ")")
+	.tsv("NumOfEstablishments.tsv", function(data) {
+		//Coerce the NumOfEstablish to number
+		data.forEach(function(d) {
+		    d.ManufacturingSector = d.ManufacturingSector;
+			d.NumOfEstablish = +d.NumOfEstablish;
+		}) ;
 
+		  
     // format the data
   // data.forEach(function(d) {
  //   d.NumOfEstablish = +d.NumOfEstablish;
