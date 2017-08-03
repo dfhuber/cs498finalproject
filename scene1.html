@@ -10,7 +10,7 @@
 <body>    	
 <script src="//d3js.org/d3.v4.min.js"></script>
 <script>
-d3.tsv("NumOfEstablishments.tsv", function(data) {
+var data = d3.tsv("NumOfEstablishments.tsv", function(data) {
 		//Coerce the NumOfEstablish to number
 		data.forEach(function(d) {
 		    d.ManufacturingSector = d.ManufacturingSector;
@@ -42,9 +42,9 @@ var svg = d3.select("body").append("svg")
           "translate(" + margin.left + "," + margin.top + ")");
 
     // format the data
-   // data.forEach(function(d) {
-   // d.NumOfEstablish = +d.NumOfEstablish;
- // });
+   data.forEach(function(d) {
+    d.NumOfEstablish = +d.NumOfEstablish;
+    });
 
   // Scale the range of the data in the domains
   x.domain([0, d3.max(data, function(d){ return d.NumOfEstablish; })])
