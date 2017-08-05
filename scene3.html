@@ -14,13 +14,13 @@
 </div>
 <nav role="navigation">
 	<ul>
-		<li><a href="scene1.html">Prev</a><li>
+		<li><a href="scene2.html">Previous</a><li>
 		<li><a href="scene3.html">Next</a><li>
 	</ul>
 <nav>
 </header>
 
-<h2>Number of Paid Employees by Manufacturing Sector</h2>
+<h2>Annual Payroll by Manufacturing Sector</h2>
 <svg width="960" height="600"></svg>
 
 <script>
@@ -37,14 +37,14 @@ var y = d3.scaleBand().range([height, 0]);
 var g = svg.append("g")
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
   
-d3.tsv("PaidEmployeesments.tsv", function(data) {
-		//Coerce the PaidEmployees to number
+d3.tsv("Payroll.tsv", function(data) {
+		//Coerce the AnnualPayroll to number
 		data.forEach(function(d) {
 		    d.ManufacturingSector = d.ManufacturingSector;
-			d.PaidEmployees = +d.PaidEmployees;
+			d.AnnualPayroll = +d.AnnualPayroll;
 		}) ;
   
-  	x.domain([0, d3.max(data, function(d) { return d.PaidEmployees; })]);
+  	x.domain([0, d3.max(data, function(d) { return d.AnnualPayroll; })]);
     y.domain(data.map(function(d) { return d.ManufacturingSector; })).padding(0.1);
 
     g.append("g")
@@ -58,7 +58,7 @@ d3.tsv("PaidEmployeesments.tsv", function(data) {
             "translate(" + (width/2) + " ," + 
                            (height + margin.top + 20) + ")")
       .style("text-anchor", "middle")
-      .text("Number of Paid");
+      .text("Annual Payroll in US Dollars");
 	  
     g.append("g")
         .attr("class", "y axis")
@@ -71,13 +71,13 @@ d3.tsv("PaidEmployeesments.tsv", function(data) {
         .attr("x", 0)
         .attr("height", y.bandwidth())
         .attr("y", function(d) { return y(d.ManufacturingSector); })
-        .attr("width", function(d) { return x(d.PaidEmployees); })
+        .attr("width", function(d) { return x(d.AnnualPayroll); })
         .on("mousemove", function(d){
             tooltip
               .style("left", d3.event.pageX - 50 + "px")
               .style("top", d3.event.pageY - 70 + "px")
               .style("display", "inline-block")
-              .html("Number of Paid Employees " + (d.PaidEmployees));
+              .html("Annual Payroll " + (d.AnnualPayroll));
         })
     		.on("mouseout", function(d){ tooltip.style("display", "none");});
 });

@@ -39,8 +39,9 @@ nav a:hover,
 nav a:focus {
 	text-decoration:underline;
 }
+
 .bar {
-	fill: #6F257F;
+	fill: steelblue;
 }
 .axis path,
 .axis line {
@@ -48,6 +49,9 @@ nav a:focus {
   stroke: #D4D8DA;
   stroke-width: 1px;
   shape-rendering: crispEdges;
+}
+.axis text {
+	font-size: 12px;
 }
 .x path {
 	display: none;
