@@ -1,7 +1,43 @@
 <style>
-body {
+html, body {
   margin: 15px;
-  background-color: #F1F3F3    
+  background-color: #F1F3F3;
+  font-size: 1em;
+}
+body {
+	font-family:san-serif;
+	font-size: 1.5em;
+}
+h1 {
+	margin: 0;
+	text-align: center;
+	letter-spacing: 0.05em;
+}
+nav ul {
+	display: block;
+	margin: 0,100px,0,100px;
+	padding: 0;
+	list-style-type: none;
+	overflow: hidden;
+}
+nav ul li {
+	padding: 0;
+	margin: 0;
+	float: left;
+	width: 50%;
+}
+nav a{
+	display: block;
+	width: 100%;
+	font-size: 200%;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+}
+nav a:hover,
+nav a:focus {
+	text-decoration:underline;
 }
 .bar {
 	fill: #6F257F;
