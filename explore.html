@@ -43,13 +43,14 @@ var g = svg.append("g")
 function render( category) {
 	
 	
-    d3.tsv("data/NumOfEstablishmentsByState.tsv", function(data) {
+  d3.tsv("data/NumOfEstablishmentsByState.tsv", function(data) {
 		//Coerce the NumOfEstablish to number
 		data.forEach(function(d) {
 		    d.ManufacturingSector = d.ManufacturingSector;
 			d.NumOfEstablish = +d.NumOfEstablish;
 		}) ;
   
+	var data = data.filter(function(d) {return d.state == category;})
 	
   	x.domain([0, d3.max(data, function(d) { return d.NumOfEstablish; })]);
     y.domain(data.map(function(d) { return d.ManufacturingSector; })).padding(0.1);
@@ -72,8 +73,9 @@ function render( category) {
         .call(d3.axisLeft(y));
 
     g.selectAll(".bar")
-        .data(data.filter(function(d) {return d.state == category;}))
-      .enter().append("rect")
+//        .data(data.filter(function(d) {return d.state == category;}))
+		.data(data)
+	.enter().append("rect")
         .attr("class", "bar")
         .attr("x", 0)
         .attr("height", y.bandwidth())
