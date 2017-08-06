@@ -15,7 +15,7 @@
 <nav role="navigation">
 	<ul>
 		<li><a href="scene2.html">Previous</a><li>
-		<li><a href="scene3.html">Next</a><li>
+		<li><a href="explore.html">Next</a><li>
 	</ul>
 <nav>
 </header>
@@ -39,7 +39,7 @@ var y = d3.scaleBand().range([height, 0]);
 var g = svg.append("g")
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
   
-d3.tsv("Data/Payroll.tsv", function(data) {
+d3.tsv("data/Payroll.tsv", function(data) {
 		//Coerce the AnnualPayroll to number
 		data.forEach(function(d) {
 		    d.ManufacturingSector = d.ManufacturingSector;
