@@ -42,15 +42,15 @@ var g = svg.append("g")
 		
 function render( category) {
 	
-	
-  d3.tsv("data/NumOfEstablishmentsByState.tsv", function(data) {
+  var file1 = "data/NumOfEstablishmentsBy" +category + ".tsv";
+  d3.tsv(file1, function(data) {
 		//Coerce the NumOfEstablish to number
 		data.forEach(function(d) {
 		    d.ManufacturingSector = d.ManufacturingSector;
 			d.NumOfEstablish = +d.NumOfEstablish;
 		}) ;
   
-	var data = data.filter(function(d) {return d.state == category;})
+//	var data = data.filter(function(d) {return d.state == category;})
 	
   	x.domain([0, d3.max(data, function(d) { return d.NumOfEstablish; })]);
     y.domain(data.map(function(d) { return d.ManufacturingSector; })).padding(0.1);
