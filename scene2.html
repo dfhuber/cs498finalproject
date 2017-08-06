@@ -14,7 +14,7 @@
 </div>
 <nav role="navigation">
 	<ul>
-		<li><a href="scene1.html">Prev</a><li>
+		<li><a href="scene1.html">Previous</a><li>
 		<li><a href="scene3.html">Next</a><li>
 	</ul>
 <nav>
@@ -24,6 +24,8 @@
 <svg width="960" height="600"></svg>
 
 <script>
+var format = d3.format(",");
+
 var svg = d3.select("svg"),
     margin = {top: 20, right: 20, bottom: 50, left: 350},
     width = +svg.attr("width") - margin.left - margin.right,
@@ -37,7 +39,7 @@ var y = d3.scaleBand().range([height, 0]);
 var g = svg.append("g")
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
   
-d3.tsv("PaidEmployeesments.tsv", function(data) {
+d3.tsv("data/PaidEmployees.tsv", function(data) {
 		//Coerce the PaidEmployees to number
 		data.forEach(function(d) {
 		    d.ManufacturingSector = d.ManufacturingSector;
@@ -50,7 +52,8 @@ d3.tsv("PaidEmployeesments.tsv", function(data) {
     g.append("g")
         .attr("class", "x axis")
        	.attr("transform", "translate(0," + height + ")")
-      	.call(d3.axisBottom(x).ticks(5).tickFormat(function(d) { return parseInt(d); }).tickSizeInner([-height]));
+		.call(d3.axisBottom(x).ticks(5).tickFormat(format).tickSizeInner([-height]));
+      //	.call(d3.axisBottom(x).ticks(5).tickFormat(function(d) { return format(parseInt(d)); }).tickSizeInner([-height]));
 
 	// text label for the x axis
 	g.append("text")             
@@ -58,7 +61,7 @@ d3.tsv("PaidEmployeesments.tsv", function(data) {
             "translate(" + (width/2) + " ," + 
                            (height + margin.top + 20) + ")")
       .style("text-anchor", "middle")
-      .text("Number of Paid");
+      .text("Number of Paid Employees");
 	  
     g.append("g")
         .attr("class", "y axis")
@@ -77,7 +80,7 @@ d3.tsv("PaidEmployeesments.tsv", function(data) {
               .style("left", d3.event.pageX - 50 + "px")
               .style("top", d3.event.pageY - 70 + "px")
               .style("display", "inline-block")
-              .html("Number of Paid Employees " + (d.PaidEmployees));
+              .html("Number of Paid Employees " + format(d.PaidEmployees));
         })
     		.on("mouseout", function(d){ tooltip.style("display", "none");});
 });

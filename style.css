@@ -43,6 +43,9 @@ nav a:focus {
 .bar {
 	fill: steelblue;
 }
+.bar:hover {
+	fill: #483D8B;
+}
 .axis path,
 .axis line {
   fill: none;
