@@ -33,7 +33,7 @@ nav ul li {
 nav a{
 	display: block;
 	width: 100%;
-	font-size: 175%;
+	font-size: 170%;
 	text-align: center;
 	padding: 0;
 	margin: 0;
@@ -44,7 +44,7 @@ nav a:focus {
 	text-decoration:underline;
 }
 button {
-	font-size: 150%;
+	font-size: 130%;
 }
 
 .bar {
@@ -79,7 +79,7 @@ button {
 .control-group {
 	position: relative;
     padding-top: 10px;
-    margin: 10px 10px 50px 350px;
+    margin: 10px 10px 50px 320px;
 }
 
 .selected {
