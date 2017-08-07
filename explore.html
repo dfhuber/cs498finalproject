@@ -19,7 +19,10 @@
 	</ul>
 <nav>
 </header>
-
+<main role="main">
+<h2>Please select a state to see the number of establishments, paid employees, and total annual 
+payroll for that state</h2>
+<p><b>
 <div class="control-group">
     <button onclick="select('Illinois')">
         Illinois
@@ -41,16 +44,16 @@
     </button>
 </div>
 
-
+</main>
 
 <script>
    var format = d3.format(",");
    
 function render( category) {
-	d3.selectAll("h2").remove();
+	d3.selectAll("h4").remove();
 	d3.selectAll("svg").remove();
 
-   d3.select("body").append("h2").text("Economic Impact for " + category);
+   d3.select("body").append("h4").text("Economic Impact for " + category);
    
    var margin = {top: 20, right: 20, bottom: 50, left: 350},
      width = 960 - margin.left - margin.right,

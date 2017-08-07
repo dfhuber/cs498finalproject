@@ -8,14 +8,23 @@ body {
 	font-family:san-serif;
 	font-size: 1.5em;
 }
+.container {
+   padding: 0;
+   margin: 0 auto;
+   width: 100%;
+}
 h1 {
 	margin: 0;
 	text-align: center;
 	letter-spacing: 0.05em;
 }
 h2 {
-	margin: 0;
+	margin: 40px 0 0 0;
 	text-align: center;
+}
+h4 {
+	text-align: center;
+	font-size: 150%;
 }
 nav ul {
 	display: block;
@@ -42,6 +51,9 @@ nav a{
 nav a:hover,
 nav a:focus {
 	text-decoration:underline;
+}
+main {
+	padding: 15px;
 }
 button {
 	font-size: 130%;
@@ -79,7 +91,7 @@ button {
 .control-group {
 	position: relative;
     padding-top: 10px;
-    margin: 10px 10px 50px 320px;
+    margin: 10px 10px 50px 300px;
 }
 
 .selected {

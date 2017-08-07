@@ -1,12 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en"
+<head>
+<title>Debbie Folks-Huber</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-<a href="barchart.html">Stacked Bar Chart</a>
-<a href="hbarchart.html">Horizontal Stacked Bar Chart</a>
-<a href="scene1.html">Scene 1 - Number of Establishments</a> 
-<a href="scene2.html">Scene 2 - Number of Paid Employees</a> 
-<a href="scene3.html">Scene 3 - Annual Payroll</a> 
+<div class="container">
+<header class="shadow-bottom">
+<div>
+    <h1>Economic Impact of Great Lakes Manufacturing</h1>
+</div>
+</header>
+<main role="main">
+<h2>What is the economic impact of manufacturing on the economy in US EPA Region 5?</h2>
+<p>US Environmental Protection Agency (EPA) Region 5 includes Illinois, Indiana, Michigan, Minnesota, 
+Ohio, and Wisconsin.  To learn about the economic impact, the first scene reviews the number of establishments
+by manufacturing sector. This is followed by reviewing the number of paid employees and the 
+total payroll for employees by manufacturing sector.  Finally, further investigation can be done by 
+state to see which manufacturing sector provides the most economic impact for the state.</p>
+
+<h3>Data</h3>
+<p>This project uses a public data set to determine the impact of manufacturing on the economy in the 
+United States Environmental Protection Agency (EPA) Region 5. This dataset was downloaded from the 
+US Census Bureau 2015 County Business Patterns data for Illinois, Indian, Michigan, Minnesota, Ohio, 
+and Wisconsin (http://factfinder2.census.gov/bkmk/navigation/1.0/en/d_program:BP)</p>
+<h3><a href="scene1.html">Begin the visualization to learn about the economic impact</a></h3>
+
+<h2>About the visualization</h2>
+<h3>Hybrid structure</h3>
+<p>This visualization follows the martini glass narrative structure.  The user follows a designated 
+path provided by the author from this introduction page through three scenes.  The user then can 
+explore the information by each state in EPA Region 5 by using the appropriate state button on the 
+final scene page.</p>
+
+<h3>Scenes</h3>
+<p>This narrative includes this introductory page, followed by three scenes that have the same layout 
+and style.  Each scene has a narrative and a chart.  The final exploration page continues to use the 
+same defined styles, however, buttons were added at the top to provide parameters for the exploration 
+of the states.  Upon selecting a state, three charts are provided with the same look and size as the 
+first three scenes.</p>
+
+<p>A simple cascading style sheet was used to have a consistent template.  It defines the font, 
+text size, color, title, navigation placement and tooltip template.</p>
+
+<h3>Annotations</h3>
+<p>Tooltips are provided for every chart throughout the narrative.  When the viewer hovers over any 
+bar in the chart, the bar changes color and the tooltip is shown with exact data for the bar. </p>
+
+<h3>Parameters</h3>
+<p>The state parameter is provide on the fourth scene (exploration).  By clicking on the state button, 
+three charts are displayed showing that states information.</p>
+
+<h3>Triggers</h3>
+<p>Triggers are provided for changing scenes by using the next or previous hyperlink.  When the viewer 
+clicks a link, the view will be taken to the next or previous scene.</p>
+
+<p>On the fourth scene (exploration), there are button triggers.  When the viewer clicks a state button, 
+the view can see charts for that state.</p>
+
+</main>
+</div>
 </body>
 </html>
