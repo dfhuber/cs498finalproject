@@ -1,0 +1,127 @@
+NAICScode	ManufacturingSector	State	SumOfAnnualPayroll
+316	Leather and allied product manufacturing	Illinois	34636
+313	Textile mills	Illinois	38581
+315	Apparel manufacturing	Illinois	62148
+314	Textile product mills	Illinois	74744
+312	Beverage and tobacco product manufacturing	Illinois	217773
+321	Wood product manufacturing	Illinois	268617
+324	Petroleum and coal products manufacturing	Illinois	450504
+337	Furniture and related product manufacturing	Illinois	508082
+327	Nonmetallic mineral product manufacturing	Illinois	756281
+322	Paper manufacturing	Illinois	972981
+335	"Electrical equipment, appliance, and component manufacturing"	Illinois	1109459
+339	Miscellaneous manufacturing	Illinois	1165817
+331	Primary metal manufacturing	Illinois	1327145
+323	Printing and related support activities	Illinois	1419118
+334	Computer and electronic product manufacturing	Illinois	1767257
+326	Plastics and rubber products manufacturing	Illinois	2076178
+336	Transportation equipment manufacturing	Illinois	3040901
+311	Food manufacturing	Illinois	3498240
+333	Machinery manufacturing	Illinois	3699309
+325	Chemical manufacturing	Illinois	4370139
+332	Fabricated metal product manufacturing	Illinois	4705482
+316	Leather and allied product manufacturing	Indiana	5988
+313	Textile mills	Indiana	16621
+315	Apparel manufacturing	Indiana	26815
+314	Textile product mills	Indiana	68008
+312	Beverage and tobacco product manufacturing	Indiana	151516
+335	"Electrical equipment, appliance, and component manufacturing"	Indiana	349009
+324	Petroleum and coal products manufacturing	Indiana	359166
+322	Paper manufacturing	Indiana	528477
+321	Wood product manufacturing	Indiana	567047
+323	Printing and related support activities	Indiana	597832
+327	Nonmetallic mineral product manufacturing	Indiana	701372
+334	Computer and electronic product manufacturing	Indiana	736359
+337	Furniture and related product manufacturing	Indiana	816518
+339	Miscellaneous manufacturing	Indiana	1501412
+325	Chemical manufacturing	Indiana	1516155
+311	Food manufacturing	Indiana	1633227
+326	Plastics and rubber products manufacturing	Indiana	1747136
+333	Machinery manufacturing	Indiana	1966199
+332	Fabricated metal product manufacturing	Indiana	2803239
+331	Primary metal manufacturing	Indiana	3055304
+336	Transportation equipment manufacturing	Indiana	7031817
+315	Apparel manufacturing	Michigan	9979
+316	Leather and allied product manufacturing	Michigan	14138
+313	Textile mills	Michigan	38290
+314	Textile product mills	Michigan	60616
+324	Petroleum and coal products manufacturing	Michigan	148536
+312	Beverage and tobacco product manufacturing	Michigan	229708
+321	Wood product manufacturing	Michigan	431735
+335	"Electrical equipment, appliance, and component manufacturing"	Michigan	513532
+323	Printing and related support activities	Michigan	637553
+322	Paper manufacturing	Michigan	643059
+327	Nonmetallic mineral product manufacturing	Michigan	735433
+339	Miscellaneous manufacturing	Michigan	819921
+334	Computer and electronic product manufacturing	Michigan	931699
+337	Furniture and related product manufacturing	Michigan	1073778
+331	Primary metal manufacturing	Michigan	1261719
+311	Food manufacturing	Michigan	1410784
+325	Chemical manufacturing	Michigan	2158048
+326	Plastics and rubber products manufacturing	Michigan	2176148
+332	Fabricated metal product manufacturing	Michigan	4079773
+333	Machinery manufacturing	Michigan	4701229
+336	Transportation equipment manufacturing	Michigan	10202744
+313	Textile mills	Minnesota	17009
+315	Apparel manufacturing	Minnesota	21956
+314	Textile product mills	Minnesota	47591
+316	Leather and allied product manufacturing	Minnesota	75902
+312	Beverage and tobacco product manufacturing	Minnesota	111334
+324	Petroleum and coal products manufacturing	Minnesota	259296
+337	Furniture and related product manufacturing	Minnesota	337961
+331	Primary metal manufacturing	Minnesota	339771
+327	Nonmetallic mineral product manufacturing	Minnesota	566588
+336	Transportation equipment manufacturing	Minnesota	582541
+321	Wood product manufacturing	Minnesota	584571
+325	Chemical manufacturing	Minnesota	641735
+322	Paper manufacturing	Minnesota	649525
+335	"Electrical equipment, appliance, and component manufacturing"	Minnesota	670263
+326	Plastics and rubber products manufacturing	Minnesota	720480
+323	Printing and related support activities	Minnesota	1207539
+339	Miscellaneous manufacturing	Minnesota	1409111
+311	Food manufacturing	Minnesota	2094895
+333	Machinery manufacturing	Minnesota	2133976
+332	Fabricated metal product manufacturing	Minnesota	2136378
+334	Computer and electronic product manufacturing	Minnesota	2764329
+315	Apparel manufacturing	Ohio	23084
+316	Leather and allied product manufacturing	Ohio	35634
+313	Textile mills	Ohio	46118
+314	Textile product mills	Ohio	106676
+312	Beverage and tobacco product manufacturing	Ohio	254374
+321	Wood product manufacturing	Ohio	380471
+324	Petroleum and coal products manufacturing	Ohio	489590
+337	Furniture and related product manufacturing	Ohio	583309
+323	Printing and related support activities	Ohio	1020782
+322	Paper manufacturing	Ohio	1035975
+339	Miscellaneous manufacturing	Ohio	1101979
+327	Nonmetallic mineral product manufacturing	Ohio	1114654
+335	"Electrical equipment, appliance, and component manufacturing"	Ohio	1247262
+334	Computer and electronic product manufacturing	Ohio	1570908
+311	Food manufacturing	Ohio	2531624
+331	Primary metal manufacturing	Ohio	2533008
+325	Chemical manufacturing	Ohio	2721070
+326	Plastics and rubber products manufacturing	Ohio	2975387
+333	Machinery manufacturing	Ohio	4415208
+332	Fabricated metal product manufacturing	Ohio	5352374
+336	Transportation equipment manufacturing	Ohio	6784941
+315	Apparel manufacturing	Wisconsin	25276
+314	Textile product mills	Wisconsin	44549
+324	Petroleum and coal products manufacturing	Wisconsin	56270
+316	Leather and allied product manufacturing	Wisconsin	58139
+313	Textile mills	Wisconsin	61658
+312	Beverage and tobacco product manufacturing	Wisconsin	177238
+327	Nonmetallic mineral product manufacturing	Wisconsin	481702
+339	Miscellaneous manufacturing	Wisconsin	623132
+321	Wood product manufacturing	Wisconsin	672581
+337	Furniture and related product manufacturing	Wisconsin	684127
+331	Primary metal manufacturing	Wisconsin	970551
+325	Chemical manufacturing	Wisconsin	1012949
+335	"Electrical equipment, appliance, and component manufacturing"	Wisconsin	1279943
+323	Printing and related support activities	Wisconsin	1285328
+336	Transportation equipment manufacturing	Wisconsin	1385043
+326	Plastics and rubber products manufacturing	Wisconsin	1442090
+334	Computer and electronic product manufacturing	Wisconsin	1573397
+322	Paper manufacturing	Wisconsin	1832572
+311	Food manufacturing	Wisconsin	3243572
+332	Fabricated metal product manufacturing	Wisconsin	3384609
+333	Machinery manufacturing	Wisconsin	3766696

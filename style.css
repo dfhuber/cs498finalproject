@@ -13,6 +13,10 @@ h1 {
 	text-align: center;
 	letter-spacing: 0.05em;
 }
+h2 {
+	margin: 0;
+	text-align: center;
+}
 nav ul {
 	display: block;
 	margin: 0,100px,0,100px;
@@ -29,7 +33,7 @@ nav ul li {
 nav a{
 	display: block;
 	width: 100%;
-	font-size: 200%;
+	font-size: 175%;
 	text-align: center;
 	padding: 0;
 	margin: 0;
@@ -38,6 +42,9 @@ nav a{
 nav a:hover,
 nav a:focus {
 	text-decoration:underline;
+}
+button {
+	font-size: 150%;
 }
 
 .bar {
@@ -68,5 +75,14 @@ nav a:focus {
   border: 1px solid #6F257F;
   padding: 14px;
   text-align: center;
+}
+.control-group {
+	position: relative;
+    padding-top: 10px;
+    margin: 10px 10px 50px 350px;
+}
+
+.selected {
+    background-color: #f08080;
 }
 </style>

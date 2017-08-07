@@ -14,33 +14,61 @@
 </div>
 <nav role="navigation">
 	<ul>
-		<li><a href="index.html">Home</a><li>
-		<li><a href="scene2.html">Next</a><li>
+		<li><a href="scene3.html">Previous</a><li>
+		<li><a href=""></a><li>
 	</ul>
 <nav>
 </header>
 
+<div class="control-group">
+    <button onclick="select('Illinois')">
+        Illinois
+    </button>
+    <button onclick="select('Indiana')">
+        Indiana
+    </button>
+    <button onclick="select('Michigan')">
+        Michigan
+    </button>
+    <button onclick="select('Minnesota')">
+        Minnesota
+    </button>	
+    <button onclick="select('Ohio')">
+        Ohio
+    </button>
+    <button onclick="select('Wisconsin')">
+        Wisconsin
+    </button>
+</div>
 
-<svg width="960" height="600"></svg>
-<h3>Number of Establishments by Manufacturing Sector</h3>
+
+
 <script>
-
-var format = d3.format(",");
-
-var svg = d3.select("svg"),
-    margin = {top: 20, right: 20, bottom: 50, left: 350},
-    width = +svg.attr("width") - margin.left - margin.right,
-    height = +svg.attr("height") - margin.top - margin.bottom;
-  
-var tooltip = d3.select("body").append("div").attr("class", "toolTip");
-  
-var x = d3.scaleLinear().range([0, width]);
-var y = d3.scaleBand().range([height, 0]);
-
-var g = svg.append("g")
-		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-		
+   var format = d3.format(",");
+   
 function render( category) {
+	d3.selectAll("h2").remove();
+	d3.selectAll("svg").remove();
+
+   d3.select("body").append("h2").text("Economic Impact for " + category);
+   
+   var margin = {top: 20, right: 20, bottom: 50, left: 350},
+     width = 960 - margin.left - margin.right,
+     height = 600 - margin.top - margin.bottom;
+  
+   var tooltip = d3.select("body").append("div").attr("class", "toolTip");
+  
+   var x = d3.scaleLinear().range([0, width]);
+   var y = d3.scaleBand().range([height, 0]);
+   
+   var chart1 = d3.select("body")
+		.append("svg")
+			.attr("width", 960)
+			.attr("height", 600)
+		.append("g")
+			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+		
+
 	
   var file1 = "data/NumOfEstablishmentsBy" +category + ".tsv";
   d3.tsv(file1, function(data) {
@@ -50,30 +78,30 @@ function render( category) {
 			d.NumOfEstablish = +d.NumOfEstablish;
 		}) ;
   
-//	var data = data.filter(function(d) {return d.state == category;})
+
 	
   	x.domain([0, d3.max(data, function(d) { return d.NumOfEstablish; })]);
     y.domain(data.map(function(d) { return d.ManufacturingSector; })).padding(0.1);
 
-    g.append("g")
+    chart1.append("g")
         .attr("class", "x axis")
        	.attr("transform", "translate(0," + height + ")")
       	.call(d3.axisBottom(x).ticks(5).tickFormat(format).tickSizeInner([-height]));
 
-	// text label for the x axis
-	g.append("text")             
+ 	// text label for the x axis
+	chart1.append("text")             
       .attr("transform",
             "translate(" + (width/2) + " ," + 
                            (height + margin.top + 20) + ")")
       .style("text-anchor", "middle")
       .text("Number of Establishments");
 	  
-    g.append("g")
+    chart1.append("g")
         .attr("class", "y axis")
         .call(d3.axisLeft(y));
 
-    g.selectAll(".bar")
-//        .data(data.filter(function(d) {return d.state == category;}))
+	//append chart1
+    chart1.selectAll(".bar")
 		.data(data)
 	.enter().append("rect")
         .attr("class", "bar")
@@ -91,25 +119,121 @@ function render( category) {
     		.on("mouseout", function(d){ tooltip.style("display", "none");})
 		.exit().remove();
     });
+	
+	var chart3 = d3.select("body")
+		.append("svg")
+			.attr("width", 960)
+			.attr("height", 600)
+		.append("g")
+			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    var file3 = "data/PaidEmployeesBy" +category + ".tsv"; 	
+	
+	d3.tsv(file3, function(data) {
+		//Coerce the PaidEmployees to number
+		data.forEach(function(d) {
+		    d.ManufacturingSector = d.ManufacturingSector;
+			d.PaidEmployees = +d.PaidEmployees;
+		}) ;
+  
+  	x.domain([0, d3.max(data, function(d) { return d.PaidEmployees; })]);
+    y.domain(data.map(function(d) { return d.ManufacturingSector; })).padding(0.1);
+
+    chart3.append("g")
+        .attr("class", "x axis")
+       	.attr("transform", "translate(0," + height + ")")
+		.call(d3.axisBottom(x).ticks(5).tickFormat(format).tickSizeInner([-height]));
+
+	// text label for the x axis
+	chart3.append("text")             
+      .attr("transform",
+            "translate(" + (width/2) + " ," + 
+                           (height + margin.top + 20) + ")")
+      .style("text-anchor", "middle")
+      .text("Number of Paid Employees");
+	  
+    chart3.append("g")
+        .attr("class", "y axis")
+        .call(d3.axisLeft(y));
+
+    chart3.selectAll(".bar")
+        .data(data)
+      .enter().append("rect")
+        .attr("class", "bar")
+        .attr("x", 0)
+        .attr("height", y.bandwidth())
+        .attr("y", function(d) { return y(d.ManufacturingSector); })
+        .attr("width", function(d) { return x(d.PaidEmployees); })
+        .on("mousemove", function(d){
+            tooltip
+              .style("left", d3.event.pageX - 50 + "px")
+              .style("top", d3.event.pageY - 70 + "px")
+              .style("display", "inline-block")
+              .html("Number of Paid Employees " + format(d.PaidEmployees));
+        })
+    		.on("mouseout", function(d){ tooltip.style("display", "none");});
+});
+	
+		var chart2 = d3.select("body")
+		.append("svg")
+			.attr("width", 960)
+			.attr("height", 600)
+		.append("g")
+			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    var file2 = "data/PayrollBy" +category + ".tsv"; 
+    d3.tsv(file2, function(data) {
+		//Coerce the AnnualPayroll to number
+		data.forEach(function(d) {
+		    d.ManufacturingSector = d.ManufacturingSector;
+			d.AnnualPayroll = +d.AnnualPayroll;
+		}) ;
+  
+  	x.domain([0, d3.max(data, function(d) { return d.AnnualPayroll; })]);
+    y.domain(data.map(function(d) { return d.ManufacturingSector; })).padding(0.1);
+	
+
+    chart2.append("g")
+        .attr("class", "x axis")
+       	.attr("transform", "translate(0," + height + ")")
+      	.call(d3.axisBottom(x).ticks(5,"s").tickFormat(function(d) { return (parseInt(d/1000000) +"M"); }).tickSizeInner([-height]));
+
+	// text label for the x axis
+	chart2.append("text")             
+      .attr("transform",
+            "translate(" + (width/2) + " ," + 
+                           (height + margin.top + 20) + ")")
+      .style("text-anchor", "middle")
+      .text("Annual Payroll in US Dollars (millions)");
+	  
+    chart2.append("g")
+        .attr("class", "y axis")
+        .call(d3.axisLeft(y));
+
+    chart2.selectAll(".bar")
+        .data(data)
+      .enter().append("rect")
+        .attr("class", "bar")
+        .attr("x", 0)
+        .attr("height", y.bandwidth())
+        .attr("y", function(d) { return y(d.ManufacturingSector); })
+        .attr("width", function(d) { return x(d.AnnualPayroll); })
+        .on("mousemove", function(d){
+            tooltip
+              .style("left", d3.event.pageX - 50 + "px")
+              .style("top", d3.event.pageY - 70 + "px")
+              .style("display", "inline-block")
+              .html("Annual Payroll $" + format(d.AnnualPayroll));
+        })
+    		.on("mouseout", function(d){ tooltip.style("display", "none");});
+});	
+	
 }
 function select(category) {
         render( category);
         
     }
 </script>
-<div class="control-group">
-    <button onclick="select('Illinois')">
-        Illinois
-    </button>
-    <button onclick="select('Indiana')">
-        Indiana
-    </button>
-    <button onclick="select('Ohio')">
-        Ohio
-    </button>
-    <button onclick="select()">
-        Clear
-    </button>
-</div>
+
 </body>
 </html>
